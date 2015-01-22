@@ -1,4 +1,5 @@
 /// <reference path="typings/tsd.d.ts" />
+/// <reference path="vendor/collections.ts" />
 
 require('./index.css');
 
@@ -10,6 +11,18 @@ import Button = require('./Button');
  * we can load the module later and assign the type to it.
  */
 import AsyncComponent = require('./AsyncComponent');
+
+var set = new collections.Set<number>();
+
+set.add(4);
+set.add(8);
+set.add(15);
+set.add(16);
+set.add(23);
+set.add(42);
+
+console.log(set.toString());
+
 
 var App = React.createClass({
 
